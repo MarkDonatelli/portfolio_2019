@@ -1,9 +1,12 @@
 import 'bootstrap';
+import './parallax.js';
 
 import '../scss/index.scss';
 
-$('#alert').click(() => {
-  alert('jQuery works!');
+$(document).ready(function() {
+  $('#alert').click(() => {
+    alert('jQuery works!');
+  });
 });
 
 // Your jQuery code
