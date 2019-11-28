@@ -1,6 +1,6 @@
 import 'bootstrap';
 import './parallax.js';
-
+import './app.js';
 import '../scss/index.scss';
 
 $(document).ready(function() {
