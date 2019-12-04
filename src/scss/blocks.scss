@@ -1,41 +1,171 @@
+@import './mixins.scss';
 
-section {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-  
-  .inner {
+/*section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.inner {
   position: relative;
-    
+}
+.outer {
+  overflow: hidden;
+}
+
+section:nth-child(1) {
+  background-color: #84c186;
+}
+section:nth-child(2) {
+  background-color: #8b6c4c;
+}
+section:nth-child(3) {
+  background-color: #39a3ee;
+}
+section:nth-child(4) {
+  background-color: #ef9144;
+}
+section:nth-child(5) {
+  background-color: #cd58eb;
+}
+section:nth-child(6) {
+  background-color: #b84b4b;
+}*/
+
+
+//menu icon
+#MenuIcon {
+  height: 25px;
+  width: 50px;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+
+  &:hover {
+    cursor: pointer;
+
+    & #MenuLine {
+      width: 40px;
+
+      &::before{
+        width: 50px;
+      }
+      &::after{
+        width: 50px;
+      }
+    }
   }
-  .outer {
-   
-    overflow: hidden;
+}
+
+#MenuLine {
+  height: 4px;
+  width: 50px;
+  background-color: #181818;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+
+  &::before{
+    content: "";
+    height: 4px;
+    width: 40px;
+    background-color: #181818;
+    position: absolute;
+    margin-top: 10px;
+    transition: all 0.3s;
   }
-  
-  section:nth-child(1) {
-    background-color: #84c186;
+
+  &::after{
+    content: "";
+    height: 4px;
+    width: 40px;
+    background-color: #181818;
+    position: absolute;
+    margin-top: -10px;
+    transition: all 0.3s;
   }
-  section:nth-child(2) {
-    background-color: #8b6c4c;
-  }
-  section:nth-child(3) {
-    background-color: #39a3ee;
-  }
-  section:nth-child(4) {
-    background-color: #ef9144;
-  }
-  section:nth-child(5) {
-    background-color: #cd58eb;
-  }
-  section:nth-child(6) {
-    background-color: #b84b4b;
-  }
-  
+}
+// end menu icon
+
+
+
+#MainMenu {
+  height: 100vh;
+  width: 300px;
+  background-color: #181818;
+z-index: 1;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  transition: all 0.5s ease-in-out;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  font-family: arial;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+ul li {
+  margin: 20px;
+}
+ul li:hover {
+  cursor: pointer;
+}
+.line {
+  height: 2px;
+  width: 150px;
+  background-color: white;
+  margin-top: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  transition: all 0.3s;
+}
+ul li:hover .line {
+  width: 180px;
+}
+#logo {
+  position: absolute;
+  top: 100;
+  left: 50%;
+  transform: translate(-50%);
+}
+#close {
+  position: absolute;
+  bottom: 150;
+  left: 50%;
+  transform: translate(-50%);
+}
+#close:hover {
+  cursor: pointer;
+}
+
+
+.portfolio-top{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  text-transform: uppercase;
+  font-weight: 700;
+p{
+  @include interpolate(font-size, 320px, 1366px, 14px, 80px);
+}
+
+}
