@@ -1,6 +1,7 @@
 import 'bootstrap';
 import './parallax.js';
 import './app.js';
+import './mouse-follow.js';
 import '../scss/index.scss';
 
 $(document).ready(function() {

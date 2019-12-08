@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Playfair+Display:400,700,900&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Lato:400,700,900&display=swap');
+
 
 html,
 body {
   font-family: "Lato", sans-serif;
-  font-family: "Playfair Display", serif;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 h1,
@@ -12,7 +13,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 p,
@@ -22,4 +23,4 @@ a {
 }
 
 
-$defaultFont: "Playfair Display", serif;
+$defaultFont: 'Bebas Neue', sans-serif;
