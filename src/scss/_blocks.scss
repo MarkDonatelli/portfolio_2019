@@ -48,7 +48,7 @@ section:nth-child(6) {
   height: 25px;
   width: 50px;
   position: fixed;
-  z-index: 1000;
+  z-index: 1;
   top: 50px;
   right: 50px;
 
@@ -187,8 +187,6 @@ section:nth-child(6) {
   ul {
     li {
       color: white;
-      font-family: $defaultFont;
-      font-weight: $semibold-weight;
       @include interpolate(font-size, 320px, 1366px, 30px, 72px);
       margin-bottom: 50px;
       width: fit-content;
@@ -211,8 +209,7 @@ section:nth-child(6) {
       }
 
       & a {
-        font-family: $defaultFont;
-
+        
         &:hover {
           text-decoration: none;
           color: white;
@@ -229,12 +226,25 @@ section:nth-child(6) {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
   align-items: center;
   text-transform: uppercase;
   font-weight: $black-weight;
 
+  &:before {
+    content: "HOME";
+    font-weight: 700;
+    color: #f9fbfd;
+    position: absolute;
+    right: -10px;
+    top: 30px;
+    @include interpolate(font-size, 320px, 1366px, 100px, 250px);
+    z-index: -1;
+
+  }
+
   h1 {
-    @include interpolate(font-size, 320px, 1366px, 20px, 88px);
+    @include interpolate(font-size, 320px, 1366px, 60px, 120px);
   }
 }
 
@@ -265,8 +275,11 @@ section:nth-child(6) {
 
 .circle {
   position: absolute;
-  border: solid 1px rgb(7, 188, 233);
-  width: 60px;
-  height: 60px;
+  border: solid 2px rgb(43, 206, 179);
+  z-index: 100;
+  pointer-events: none;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
+

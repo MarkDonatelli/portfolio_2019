@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Lato:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 
 
 html,
 body {
-  font-family: "Lato", sans-serif;
   font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -19,8 +18,8 @@ h6 {
 p,
 li,
 a {
-  font-family: "Lato", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 
-$defaultFont: 'Bebas Neue', sans-serif;
+$default-font: 'Bebas Neue', sans-serif;
