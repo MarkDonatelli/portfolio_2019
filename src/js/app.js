@@ -82,7 +82,7 @@ tl.to('.menu-icon', 1, {
       ease: Power4.easeOut,
     },
     '1.1'
-  );
+  )
 
 navButton.addEventListener('click', () => {
   tl.play();
