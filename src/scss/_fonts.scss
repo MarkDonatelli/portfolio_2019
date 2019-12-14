@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 
 
 html,
 body {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Karla', sans-serif;
+  letter-spacing: -5px;
 }
 
 h1,
@@ -12,14 +13,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 p,
 li,
 a {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 
-$default-font: 'Bebas Neue', sans-serif;
+$default-font: 'Karla', sans-serif;

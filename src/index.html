@@ -8,106 +8,153 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Mark Donatelli</title>
   </head>
 
   <body>
-    <!--mouse follow circle-->
-    <!--<span id="circle" class="circle"></span>-->
-    <!--Nav Menu Icon & Slide Out Menu-->
-    <div class="container-fluid menu-container">
-      <div class="container-inner">
-        <div class="row">
-          <div class="col-12">
-            <h1>Md</h1>
-            <div class="menu-icon">
-              <div class="menu-line"></div>
-            </div>
-            <div class="main-menu">
-              <div class="close-menu-icon-block">
-                <div class="menu-icon-close">
-                  <div class="menu-line-close"></div>
-                </div>
+    <!--intro page animation
+    <div class="container-fluid container-intro">
+      <div class="overlay">
+        <p class="intro-title">Mark Donatelli</p>
+        <div class="intro">
+          <button class="myBtn" onclick="fadeOut()">Hello World</button>
+        </div>
+      </div>
+
+      <div class="overlay-2"></div>
+    </div>-->
+
+    <div class="content">
+      <!--Nav Menu Icon & Slide Out Menu-->
+      <div class="container-fluid menu-container">
+        <div class="container-inner">
+          <div class="row">
+            <div class="col-12">
+              <div class="menu-icon">
+                <div class="menu-line"></div>
               </div>
-              <div class="main-menu-items">
-                <ul>
-                  <li class="nav-item one"><a href="#">Home</a></li>
-                  <li class="nav-item two"><a href="#">Work</a></li>
-                  <li class="nav-item three"><a href="#">About</a></li>
-                  <li class="nav-item four"><a href="#">Contact</a></li>
-                </ul>
+              <div class="main-menu">
+                <div class="close-menu-icon-block">
+                  <div class="menu-icon-close">
+                    <div class="menu-line-close"></div>
+                  </div>
+                </div>
+                <div class="main-menu-items">
+                  <ul>
+                    <li class="nav-item one"><a href="#">Home</a></li>
+                    <li class="nav-item two"><a href="#">Work</a></li>
+                    <li class="nav-item three"><a href="#">About</a></li>
+                    <li class="nav-item four"><a href="#">Contact</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- End: Nav Menu Icon & Slide Out Menu-->
-    <!--Top Section-->
+
     <section class="portfolio-top">
       <div class="container-fluid">
-        <div class="container-inner">
-          <div class="row">
-            <div class="col-12">
-              <div class="l.title-top">
-                <h1>
-                  <span
-                    class="d-inline-block"
-                    data-parallax='{"x": 50, "from-scroll": 50, "distance": 0, "smoothness": 30}'
-                    >Mark Donatelli</span
-                  ><br />
-                  <span
-                    class="d-inline-block"
-                    data-parallax='{"x": -55, "from-scroll": 50, "distance": 0, "smoothness": 30}'
-                    >Front End Developer</span
-                  ><br />
-                  <span
-                    class="d-inline-block"
-                    data-parallax='{"x": 100, "from-scroll": 50, "distance": 0, "smoothness": 30}'
-                    >based in Boston, MA</span
-                  >
-                </h1>
-                <div class="sub-title-container">
-                  <span class="undeline-info">Strategy</span>
-                  <span class="undeline-info">Develop</span>
-                  <span class="undeline-info">Code</span>
-                </div>
-              </div>
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <h1>
+              <span class="d-inline-block">Mark Donatelli</span><br />
+              <span class="d-inline-block ">Front End Developer</span><br />
+              <span class="d-inline-block">Boston, MA</span>
+            </h1>
+            <div class="home-button-row">
+                <button class="btn main-button">Contact</button>
+                <button class="btn main-button">See My Projects</button>
             </div>
+          </div>
+          <div class="col-md-5">
+              <img src="public/images/devices.svg" class="img-fluid" />
           </div>
         </div>
       </div>
     </section>
-    <!--End: Top Section-->
+
+    <!--intro tween-->
+    <script>
+      function fadeOut() {
+        TweenMax.to(".myBtn", 1, {
+          y: -100,
+          opacity: 0
+        });
+
+        TweenMax.to(".screen", 2, {
+          y: -400,
+          opacity: 0,
+          ease: Power2.easeInOut,
+          delay: 2
+        });
+
+        TweenMax.from(".overlay", 2, {
+          ease: Power2.easeInOut
+        });
+
+        TweenMax.to(".overlay", 2, {
+          delay: 2.6,
+          top: "-110%",
+          ease: Expo.easeInOut
+        });
+
+        TweenMax.to(".overlay-2", 2, {
+          delay: 3,
+          top: "-110%",
+          ease: Expo.easeInOut
+        });
+
+        TweenMax.from(".content", 2, {
+          delay: 3.2,
+          opacity: 0,
+          ease: Power2.easeInOut
+        });
+
+        TweenMax.to(".content", 2, {
+          opacity: 1,
+          delay: 3.2,
+          ease: Power2.easeInOut
+        });
+      }
+    </script>
+    <!--intro tween-->
+
+    <!--mouse follow circle-->
+    <!--<span id="circle" class="circle"></span>-->
 
     <section class="section-project-one">
-      <div class="container-fluid prjoect-left">
-        <div class="row">
-          <div class="col-md-5">
-            <div class="flex-container-column">
-              <div class="project-info">
-                <p class="small-title">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <h4>Project One</h4>
-                <a href="project-link" href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing.</a
-                >
+        <div class="container-fluid prjoect-left">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="flex-container-column">
+                <div class="project-info">
+                  <p class="small-title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                  <h4>Project One</h4>
+                  <a href="project-link" href=""
+                    >Lorem ipsum, dolor sit amet consectetur adipisicing.</a
+                  >
+                </div>
+  
+                <div class="img-container">
+                  <img src="public/images/image_1.jpg" class="img-fluid" />
+                </div>
+  
+                <div class="overlay"></div>
               </div>
-
-              <div class="img-container">
-                <img src="public/images/image_1.jpg" class="img-fluid" />
-              </div>
-
-              <div class="overlay"></div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- container -->
     <div class="container">
       <section class="letter text-center pt-5">
         <div class="h1 text-uppercase">
@@ -125,7 +172,6 @@
       <section class="cr bg-light">
         <div class="container pt-5">
           <div class="row">
-            <!-- Image RotateZ CW Parallax -->
             <figure
               class="figure d-table mx-auto"
               data-parallax='{"rotateZ" : 20}'
@@ -138,7 +184,6 @@
               />
             </figure>
 
-            <!-- Image Scale Parallax -->
             <figure
               class="figure d-table mx-auto"
               data-parallax='{"scale" : 0.75}'
@@ -150,8 +195,6 @@
                 alt="Image"
               />
             </figure>
-
-            <!-- Image RotateZ CCW Parallax -->
             <figure
               class="figure d-table mx-auto"
               data-parallax='{"rotateZ" : -20}'
@@ -167,7 +210,6 @@
         </div>
       </section>
 
-      <!-- Text (Letters) Parallax -->
       <div class="h1 text-uppercase">
         <span class="d-inline-block mr-2" data-parallax='{"y" : -20}'>P</span>
         <span class="d-inline-block mr-2" data-parallax='{"y" : 20}'>a</span>
@@ -182,7 +224,6 @@
       <section class="cr p-5 m-5 bg-light">
         <div class="container pt-5">
           <div class="row">
-            <!-- Image RotateZ CW Parallax -->
             <figure
               class="figure d-table mx-auto"
               data-parallax='{"rotateZ" : 20}'
@@ -195,7 +236,6 @@
               />
             </figure>
 
-            <!-- Image Scale Parallax -->
             <figure
               class="figure d-table mx-auto"
               data-parallax='{"scale" : 0.75}'
@@ -208,7 +248,6 @@
               />
             </figure>
 
-            <!-- Image RotateZ CCW Parallax -->
             <figure
               class="figure d-table mx-auto"
               data-parallax='{"rotateZ" : -20}'
@@ -223,8 +262,6 @@
           </div>
         </div>
       </section>
-
-      <!-- Text (Letters) Parallax -->
       <div class="h1 text-uppercase">
         <span class="d-inline-block mr-2" data-parallax='{"y" : -20}'>P</span>
         <span class="d-inline-block mr-2" data-parallax='{"y" : 20}'>a</span>
@@ -239,7 +276,6 @@
       <section class="cr p-5 m-5 bg-light">
         <div class="container pt-5">
           <div class="row">
-            <!-- Image RotateZ CW Parallax -->
             <figure
               class="figure d-table mx-auto"
               data-parallax='{"rotateZ" : 20}'
@@ -252,7 +288,6 @@
               />
             </figure>
 
-            <!-- Image Scale Parallax -->
             <figure
               class="figure d-table mx-auto"
               data-parallax='{"scale" : 0.75}'
@@ -265,7 +300,6 @@
               />
             </figure>
 
-            <!-- Image RotateZ CCW Parallax -->
             <figure
               class="figure d-table mx-auto"
               data-parallax='{"rotateZ" : -20}'
@@ -281,11 +315,11 @@
         </div>
       </section>
     </div>
-    <!-- /.container -->
+    /.container -->
 
     <!-- FOOTER -->
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
 
     <!-- ScrollMagic -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
