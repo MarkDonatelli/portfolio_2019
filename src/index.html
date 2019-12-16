@@ -8,12 +8,10 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Mark Donatelli</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet"/>
+    <link href="/src/font-awesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+<!--font-awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -28,6 +26,28 @@
 
       <div class="overlay-2"></div>
     </div>-->
+
+    <div id="particles-js"></div>
+    <div id="grid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="grid-line hey"></div>
+                </div>
+                <div class="col-md-3">
+                    <div class="grid-line hey"></div>
+                </div>
+                <div class="col-md-3">
+                    <div class="grid-line hey"></div>
+                </div>
+                <div class="col-md-3">
+                    <div class="grid-line hey"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
 
     <div class="content">
       <!--Nav Menu Icon & Slide Out Menu-->
@@ -60,21 +80,29 @@
     </div>
 
     <section class="portfolio-top">
+      <div class="scroll-arrow-section">
+      
+        <p>Scroll</p>
+        <svg class="bi bi-arrow-down bounce" width="32" height="32" viewBox="0 0 20 20" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M6.646 11.646a.5.5 0 01.708 0L10 14.293l2.646-2.647a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+          <path fill-rule="evenodd" d="M10 4.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V5a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+        </svg>
+      </div>
       <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-md-5">
-            <h1>
-              <span class="d-inline-block">Mark Donatelli</span><br />
-              <span class="d-inline-block ">Front End Developer</span><br />
-              <span class="d-inline-block">Boston, MA</span>
-            </h1>
-            <div class="home-button-row">
-                <button class="btn main-button">Contact</button>
-                <button class="btn main-button">See My Projects</button>
+        <div class="row row--home">
+            <div class="col-12 align-items-flex--end svg-container--home">
+              <h1><span class="mark-title">Mark</span> <br>Donatelli</h1>
+           <!-- <div class="home-button-row">
+              <button class="btn main-button">Contact</button>
+              <button class="btn main-button">See My Work</button>
+              <button class="btn button-soft"><span class="in-button"></span></button>-->
             </div>
+          <div class="col-md-6 text-column-home">
+              <div class="sub-info">
+                  <p class="weight-bold front-end-dev-title">Front End Developer</p>
+                  <p>Based in Boston, MA</p>
+                </div>
           </div>
-          <div class="col-md-5">
-              <img src="public/images/devices.svg" class="img-fluid" />
           </div>
         </div>
       </div>
@@ -130,32 +158,32 @@
     <!--<span id="circle" class="circle"></span>-->
 
     <section class="section-project-one">
-        <div class="container-fluid prjoect-left">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="flex-container-column">
-                <div class="project-info">
-                  <p class="small-title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                  <h4>Project One</h4>
-                  <a href="project-link" href=""
-                    >Lorem ipsum, dolor sit amet consectetur adipisicing.</a
-                  >
-                </div>
-  
-                <div class="img-container">
-                  <img src="public/images/image_1.jpg" class="img-fluid" />
-                </div>
-  
-                <div class="overlay"></div>
+      <div class="container-fluid prjoect-left">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="flex-container-column">
+              <div class="project-info">
+                <p class="small-title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <h4>Project One</h4>
+                <a href="project-link" href=""
+                  >Lorem ipsum, dolor sit amet consectetur adipisicing.</a
+                >
               </div>
+
+              <div class="img-container">
+                <img src="public/images/image_1.jpg" class="img-fluid" />
+              </div>
+
+              <!--- <div class="overlay"></div>-->
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    <div class="container">
+    <!--<div class="container">
       <section class="letter text-center pt-5">
         <div class="h1 text-uppercase">
           <span class="d-inline-block mr-2" data-parallax='{"y" : -20}'>P</span>
@@ -318,6 +346,10 @@
     /.container -->
 
     <!-- FOOTER -->
+
+<!--particles js-->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
 
@@ -329,5 +361,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
     <!--doodle-->
     <script src="https://unpkg.com/css-doodle@0.7.6/css-doodle.min.js"></script>
+
+
   </body>
 </html>

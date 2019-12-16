@@ -3,8 +3,15 @@ import './parallax.js';
 import './app.js';
 import './mouse-follow.js';
 import '../scss/index.scss';
+import './particles.js';
 
 $(document).ready(function() {
+
+  //particles init
+  particlesJS.load('particles-js', 'particles.json', function(){
+    console.log('particles.json loaded...');
+  });
+  
   /*$('#MenuIcon').click(function() {
     $('#MainMenu').css('left', '0px');
     function showMenu() {

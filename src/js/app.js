@@ -65,6 +65,3 @@ navButtonClose.addEventListener('click', () => {
   tl.reverse();
 });
 
-
-
-
