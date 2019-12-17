@@ -8,8 +8,7 @@
       }
     },
     "color": {
-      "value": 
-      ["#0047e9","#3ddc97"]
+      "value": ["#0047e9", "#3ddc97"]
     },
     "shape": {
       "type": "circle",
@@ -55,7 +54,7 @@
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 2,
       "direction": "none",
       "random": false,
       "straight": false,
