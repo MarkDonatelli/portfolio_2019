@@ -33,7 +33,7 @@ html {
 
 //nav home
 .nav-home {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 //nav-bar-top
@@ -266,7 +266,7 @@ html {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 0 70px 0;
+  padding: 0 0 100px 0;
   display: flex;
   flex-direction: column;
 
@@ -433,7 +433,7 @@ html {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(50deg, #002256 0%, #000000 100%);
+  background-color: black;
 }
 
 .overlay-2 {
@@ -563,29 +563,5 @@ button {
   background-position: 50% 50%;
 }
 
-/*
-#grid {
-  position: fixed;
-  width: 100%;
-}
 
-#grid .col-md-3 .grid-line {
-  height: 0vh;
-  border-left: 1px solid rgb(214, 214, 214);
-}
 
-#grid .col-md-3 .grid-line.hey {
-  height: 100vh;
-  transition: height 1.2s ease;
-}
-
-#grid .col-md-3:last-child .grid-line {
-  height: 0vh;
-  border-left: 1px solid rgb(214, 214, 214);
-  border-right: 1px solid rgb(214, 214, 214);
-}
-
-#grid .col-md-3:last-child .grid-line.hey {
-  height: 100vh;
-  transition: height 1.2s ease;
-}*/
