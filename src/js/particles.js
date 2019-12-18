@@ -7,6 +7,7 @@
 /* v2.0.0
 /* ----------------------------------------------- */
 
+
 var pJS = function(tag_id, params) {
   var canvas_el = document.querySelector(
     '#' + tag_id + ' > .particles-js-canvas-el'
@@ -92,11 +93,11 @@ var pJS = function(tag_id, params) {
       detect_on: 'canvas',
       events: {
         onhover: {
-          enable: true,
+          enable: false,
           mode: 'grab',
         },
         onclick: {
-          enable: true,
+          enable: false,
           mode: 'push',
         },
         resize: true,

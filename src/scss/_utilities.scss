@@ -18,3 +18,41 @@
 .neg-top-50{
   margin-top: -50px;
 }
+
+
+//strikethrough hover
+.hover-line-through {
+  position: relative;
+  display: block;
+}
+.hover-line-through:before,
+.hover-line-through:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  top: 50%;
+  margin-top: -0.5px;
+  background-color: #00ffff;
+}
+
+.hover-line-through:before {
+  left: -2.5px;
+}
+.hover-line-through:after {
+  right: 2.5px;
+  background-color: #00ffff;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.hover-line-through:hover:before {
+  background-color: #00ffff;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.hover-line-through:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}

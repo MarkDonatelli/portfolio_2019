@@ -85,6 +85,9 @@ const config = {
         from: './src/public',
         to: 'public',
       },
+      {
+        from: './src/particles.json'
+      },
     ]),
     new MiniCssExtractPlugin({
       filename: IS_DEV ? 'css/[name].css' : 'css/[name].[contenthash].css',
