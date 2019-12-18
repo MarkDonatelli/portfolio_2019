@@ -11,23 +11,49 @@ html {
   overflow-x: hidden;
 }
 
+//home section wrap
+.home-wrap {
+  max-width: 1692px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 //page intro
 .container-intro {
   padding: 0;
 }
 
+//move to typography
 .weight-bold {
   font-weight: $weight-bold;
+}
+
+//nav home
+.nav-home {
+  margin-bottom: 80px;
+}
+
+//nav-bar-top
+.nav-bar-top {
+  max-width: 1692px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 50px;
+  justify-content: space-between;
 }
 
 //menu icon
 .menu-icon {
   height: 25px;
   width: 50px;
-  position: fixed;
-  z-index: 1;
-  top: 75px;
-  right: 100px;
+  //position: fixed;
+  //z-index: 1;
+  //top: 75px;
+  //right: 100px;
 
   &:hover {
     cursor: pointer;
@@ -49,7 +75,7 @@ html {
   height: 4px;
   width: 50px;
   background-color: #000000;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -111,7 +137,7 @@ html {
   height: 4px;
   width: 50px;
   background-color: white;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -138,12 +164,6 @@ html {
   }
 }
 // end close menu icon
-
-.menu-container {
-  h1 {
-    @include interpolate(font-size, 320px, 1366px, 20px, 49px);
-  }
-}
 
 .main-menu {
   height: 100vh;
@@ -227,27 +247,28 @@ html {
   margin-left: 5px;
 }
 
+.social-connect-band {
+  ul {
+    display: flex;
+
+    li a {
+      padding-right: 30px;
+      text-decoration: none;
+      font-size: 25px;
+    }
+  }
+}
+
 //portfolio / home top section
 .portfolio-top {
   width: 100%;
-  height: 100vh;
+  min-height: 84.5vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  /*\background-image: url("/public/images/hero-bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  /*&:before {
-    content: "HOME";
-    font-weight: 600;
-    color: #f9fbfd;
-    position: absolute;
-    right: -10px;
-    top: 30px;
-    @include interpolate(font-size, 320px, 1366px, 100px, 250px);
-    z-index: -1;
-  }*/
+  padding: 0 0 70px 0;
+  display: flex;
+  flex-direction: column;
 
   h1 {
     @include interpolate(font-size, 320px, 1366px, 90px, 325px);
@@ -258,9 +279,9 @@ html {
     position: relative;
     z-index: 1;
     text-rendering: optimizeLegibility !important;
--webkit-font-smoothing: antialiased !important;
+    -webkit-font-smoothing: antialiased !important;
 
-    &:before{
+    &:before {
       content: "";
       content: "";
       position: absolute;
@@ -270,7 +291,7 @@ html {
       left: 0;
       z-index: -1;
     }
-    &:after{
+    &:after {
       content: "";
       position: absolute;
       background-color: aqua;
@@ -280,18 +301,29 @@ html {
       margin-top: -132px;
       z-index: -1;
     }
-
   }
 }
 
-
-.row--home {
-  height: 100vh;
+.main-title-home {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 185px;
+  padding-top: 40px;
 }
 
 .text-column-home {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.home-bottom-row {
+  width: 100%;
+  background: red;
 }
 
 .social-media-col {
@@ -314,15 +346,7 @@ html {
   }
 }
 
-.svg-container--home {
-  display: flex;
-  align-self: flex-end;
-  justify-content: center;
-  padding: 0 50px 0 50px;
-}
-
-.sub-info {
-  margin: 0 auto;
+.sub-info, .connect {
   p {
     @include interpolate(font-size, 320px, 1366px, 20px, 30px);
   }
@@ -369,7 +393,9 @@ html {
 
 //test
 .section-project-one {
-  height: 100vh;
+  background-color: #007bff !important;
+  z-index: 1;
+  position: relative;
   background-image: linear-gradient(50deg, #002256 0%, #000000 100%);
 }
 
@@ -537,7 +563,6 @@ button {
   background-position: 50% 50%;
 }
 
-
 /*
 #grid {
   position: fixed;
@@ -564,4 +589,3 @@ button {
   height: 100vh;
   transition: height 1.2s ease;
 }*/
-

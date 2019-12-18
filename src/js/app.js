@@ -4,7 +4,8 @@ const navButtonClose = document.querySelector('.menu-icon-close');
 const tl = new TimelineLite({ paused: true });
 
 tl.to('.menu-icon', 1, {
-  right: -100,
+  x: 500,
+  opacity: 0,
   ease: Power4.easeOut,
 })
   .to(
