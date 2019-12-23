@@ -13,7 +13,6 @@ tl.to('.menu-icon', 1, {
     1,
     {
       top: 0,
-
       ease: Power4.easeOut,
     },
     '-=1'

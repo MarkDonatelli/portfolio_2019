@@ -7,9 +7,9 @@
   cursor: crosshair;
 }
 
-a{
+a {
   text-decoration: none !important;
-  &:hover{
+  &:hover {
     color: #212529;
   }
 }
@@ -18,17 +18,6 @@ body,
 html {
   overflow-x: hidden;
 }
-
-//home section wrap
-.home-wrap {
-  max-width: 1692px;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 //page intro
 .container-intro {
   padding: 0;
@@ -41,16 +30,16 @@ html {
 
 //nav home
 .nav-home {
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
 }
 
 //nav-bar-top
 .nav-bar-top {
-  max-width: 1692px;
+  max-width: 1775px;
   width: 100%;
   margin: 0 auto;
   display: flex;
-  padding-top: 50px;
+  padding-top: 30px;
   justify-content: space-between;
 }
 
@@ -80,9 +69,9 @@ html {
 }
 
 .menu-line {
-  height: 4px;
+  height: 2px;
   width: 50px;
-  background-color: #000000;
+  background-color: #050401;;
   position: relative;
   top: 50%;
   left: 50%;
@@ -91,21 +80,21 @@ html {
 
   &::before {
     content: "";
-    height: 4px;
+    height: 2px;
     width: 40px;
-    background-color: #000000;
+    background-color: #050401;;
     position: absolute;
-    margin-top: 10px;
+    margin-top: 7px;
     transition: all 0.3s;
   }
 
   &::after {
     content: "";
-    height: 4px;
+    height: 2px;
     width: 40px;
-    background-color: #000000;
+    background-color: #050401;;
     position: absolute;
-    margin-top: -10px;
+    margin-top: -7px;
     transition: all 0.3s;
   }
 }
@@ -171,7 +160,7 @@ html {
 }
 // end close menu icon
 
-.menu-row{
+.menu-row {
   height: 100%;
   justify-content: flex-start;
   align-items: center;
@@ -183,11 +172,10 @@ html {
 .main-menu {
   height: 100vh;
   width: 100vw;
-  background-color: #000;
+  background-color: #050401;
   z-index: 99;
   position: fixed;
   top: -1200px;
-
 }
 
 .main-menu-items {
@@ -231,6 +219,60 @@ html {
   }
 }
 
+//top section home
+.home {
+  .main-title-home {
+    padding-top: 70px;
+    h1 {
+      @include interpolate(font-size, 320px, 1366px, 200px, 400px);
+      letter-spacing: -65px;
+      line-height: 262px;
+      font-weight: 600;
+      padding-bottom: 0;
+      color: #050401;;
+      position: relative;
+      z-index: 1;
+      text-rendering: optimizeLegibility !important;
+      -webkit-font-smoothing: antialiased !important;
+
+      &:before {
+        content: "";
+        content: "";
+        position: absolute;
+        background-color: #e9e9e9;
+        border-radius: 50%;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        height: 575px;
+        width: 575px;
+        left: 0;
+        z-index: -1;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: aqua;
+        background-color: white;
+        height: 575px;
+        width: 575px;
+        border-radius: 50%;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        right: 0;
+        margin-top: -132px;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+//details section
+.my-details{
+  height: 100vh;
+  display: flex;
+  padding-top: 150px;
+}
+
+
+
 .scroll-arrow-section {
   position: absolute;
   left: 50%;
@@ -267,62 +309,14 @@ html {
     li a {
       margin-right: 30px;
       text-decoration: none;
-      font-size: 25px;
+      font-size: 20px;
     }
   }
 }
-
-//portfolio / home top section
-.portfolio-top {
-  width: 100%;
-  min-height: 84.5vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 85px 0;
-  display: flex;
-  flex-direction: column;
-
-  h1 {
-    @include interpolate(font-size, 320px, 1366px, 90px, 325px);
-    letter-spacing: -5px;
-    line-height: 250px;
-    font-weight: 600;
-    color: #000000;
-    position: relative;
-    z-index: 1;
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
-
-    &:before {
-      content: "";
-      content: "";
-      position: absolute;
-      background-color: #e9e9e9;
-      height: 100%;
-      width: 50%;
-      left: 0;
-      z-index: -1;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      background-color: aqua;
-      height: 100%;
-      width: 50%;
-      right: 0;
-      margin-top: -132px;
-      z-index: -1;
-    }
-  }
-}
-
 .main-title-home {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: 185px;
-  padding-top: 40px;
 }
 
 .text-column-home {
@@ -364,7 +358,7 @@ html {
   p {
     @include interpolate(font-size, 320px, 1366px, 20px, 30px);
 
-    a{
+    a {
       text-decoration: none;
       color: #212529;
     }
@@ -415,7 +409,7 @@ html {
   background-color: #007bff !important;
   z-index: 1;
   position: relative;
-  background-image: linear-gradient(50deg, #002256 0%, #000000 100%);
+  background-image: linear-gradient(50deg, #002256 0%, #050401 100%);
 }
 
 .flex-container-column {
@@ -452,7 +446,7 @@ html {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: #050401;
 }
 
 .overlay-2 {
@@ -460,45 +454,44 @@ html {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(50deg, #002256 0%, #000000 100%);
+  background-image: linear-gradient(50deg, #002256 0%, #050401 100%);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .intro-title {
-    @include interpolate(font-size, 320px, 1366px, 90px, 325px);
-    letter-spacing: -5px;
-    line-height: 250px;
-    font-weight: 600;
-    color: #000000;
-    position: relative;
-    z-index: 1;
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
+  @include interpolate(font-size, 320px, 1366px, 90px, 325px);
+  letter-spacing: -5px;
+  line-height: 250px;
+  font-weight: 600;
+  color: #050401;;
+  position: relative;
+  z-index: 1;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
 
-    &:before {
-      content: "";
-      content: "";
-      position: absolute;
-      background-color: #e9e9e9;
-      height: 100%;
-      width: 50%;
-      left: 0;
-      z-index: -1;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      background-color: aqua;
-      height: 100%;
-      width: 50%;
-      right: 0;
-      margin-top: -132px;
-      z-index: -1;
-    }
+  &:before {
+    content: "";
+    content: "";
+    position: absolute;
+    background-color: #e9e9e9;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: -1;
   }
-
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: aqua;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    margin-top: -132px;
+    z-index: -1;
+  }
+}
 
 .myBtn {
   position: absolute;
@@ -600,11 +593,38 @@ button {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #fff;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+  z-index: -1;
+}
+
+.right-wrap{
+  max-width: 50%;
+  height: 300px;
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.what-i-do{
+  /*ul{
+    -moz-column-count: 4;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 20px;
+    column-count: 4;
+    column-gap: 20px;
+  }*/
+  ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    li{
+      border-bottom: 1px solid lightgray;
+      font-size: 18px;
+      color: $font-grey;
+      padding-bottom: 5px;
+    }
+  }
 }
 
 

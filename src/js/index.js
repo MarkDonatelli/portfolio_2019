@@ -11,25 +11,14 @@ $(document).ready(function() {
   particlesJS.load('particles-js', 'particles.json', function(){
     console.log('particles.json loaded...');
   });
+
+  var menu = $('.main-menu');
+
+  if($(menu).is(':visible')){
+    console.log('here');
+  }
   
-  /*$('#MenuIcon').click(function() {
-    $('#MainMenu').css('left', '0px');
-    function showMenu() {
-      $('#MainMenu').css('left', '0px');
-      $('#MenuIcon').animate({ right: '-100' }, 300);
-    }
-    setTimeout(showMenu, 100);
-  });
 
-
-
-  $('#close').click(function() {
-    function hideMenu() {
-      $('#MainMenu').css('left', '-800px');
-      $('#MenuIcon').animate({ right: '50' }, 300);
-    }
-    setTimeout(hideMenu, 100);
-  });*/
 });
 
 // Your jQuery code
