@@ -40,7 +40,7 @@
   height: 3px;
   top: 50%;
   margin-top: -0.5px;
-  background-color: #00ffff;
+  background-color: #226CE0;
 }
 
 .hover-line-through:before {
@@ -48,12 +48,12 @@
 }
 .hover-line-through:after {
   right: 2.5px;
-  background-color: #00ffff;
+  background-color: #226CE0;
   transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .hover-line-through:hover:before {
-  background-color: #00ffff;
+  background-color: #226CE0;
   width: 100%;
   transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
@@ -70,4 +70,8 @@
 
 .bg-gradient--grey{
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+.bg-light-grey{
+  background-color: #f6f6f6;
 }
