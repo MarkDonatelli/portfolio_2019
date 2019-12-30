@@ -5,13 +5,20 @@ $(document).ready(function() {
     yp = 0;
 
   $(document).mousemove(function(e) {
-    mouseX = e.pageX - 30;
-    mouseY = e.pageY - 30;
+    mouseX = e.pageX - 10;
+    mouseY = e.pageY - 10;
   });
 
   setInterval(function() {
     xp += (mouseX - xp) / 6;
     yp += (mouseY - yp) / 6;
-    $('#circle').css({ left: xp + 'px', top: yp + 'px' });
+    $("#circle").css({ left: xp + "px", top: yp + "px" });
   }, 20);
+
+  $("a").mouseenter(function() {
+    $(".circle").addClass("circle-grow");
+  });
+  $("a").mouseleave(function() {
+    $(".circle").removeClass("circle-grow");
+  });
 });

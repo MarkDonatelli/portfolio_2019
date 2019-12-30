@@ -37,10 +37,10 @@
   content: "";
   position: absolute;
   width: 0%;
-  height: 3px;
+  height: 2px;
   top: 50%;
   margin-top: -0.5px;
-  background-color: #226CE0;
+  background-color: $red;
 }
 
 .hover-line-through:before {
@@ -48,12 +48,12 @@
 }
 .hover-line-through:after {
   right: 2.5px;
-  background-color: #226CE0;
+  background-color: $red;
   transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .hover-line-through:hover:before {
-  background-color: #226CE0;
+  background-color: $red;
   width: 100%;
   transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
@@ -75,3 +75,8 @@
 .bg-light-grey{
   background-color: #f6f6f6;
 }
+
+.text-light-grey{
+ color: #CBCFD3;
+}
+

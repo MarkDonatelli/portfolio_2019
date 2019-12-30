@@ -10,8 +10,15 @@
 a {
   text-decoration: none !important;
   &:hover {
-    color: #212529;
+    color: $red;
   }
+}
+
+body{
+  //background-image: url("../public/images/noisegif.gif");
+  //background-color:  #ff4d5a;
+  //background-blend-mode: color-burn;
+  background-image: linear-gradient(50deg, #002256 0%, #000000 100%);
 }
 
 body,
@@ -71,7 +78,7 @@ html {
 .menu-line {
   height: 2px;
   width: 50px;
-  background-color: #050401;;
+  background-color: white;
   position: relative;
   top: 50%;
   left: 50%;
@@ -82,7 +89,7 @@ html {
     content: "";
     height: 2px;
     width: 40px;
-    background-color: #050401;;
+    background-color: white;
     position: absolute;
     margin-top: 7px;
     transition: all 0.3s;
@@ -92,7 +99,7 @@ html {
     content: "";
     height: 2px;
     width: 40px;
-    background-color: #050401;;
+    background-color: white;
     position: absolute;
     margin-top: -7px;
     transition: all 0.3s;
@@ -172,7 +179,7 @@ html {
 .main-menu {
   height: 100vh;
   width: 100vw;
-  background-color: #050401;
+  background-color: white;
   z-index: 99;
   position: fixed;
   top: -1200px;
@@ -219,24 +226,110 @@ html {
   }
 }
 
-//top section home
 .home {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .l-home-content{
+    margin:0 auto;
+    position: relative;
+  }
+  .seperator-left {
+    position: absolute;
+    display: block;
+    background: $red;
+    width: 90px;
+    height: 5px;
+    top: 95%;
+    left: 1.5%;
+  }
+  .seperator-middle {
+    position: absolute;
+    display: block;
+    background: $red;
+    width: 90px;
+    height: 5px;
+    top: 101%;
+    left: 8.5%;
+  }
+  .seperator-right {
+    position: absolute;
+    display: block;
+    background: $red;
+    width: 90px;
+    height: 5px;
+    top: 107%;
+    left: 13.5%;
+  }
+  .main-title {
+    // @include interpolate(font-size, 320px, 1366px, 50px, 75px);
+    font-size: 122px;
+    line-height: 120px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+    font-weight: 700;
+    margin: 0 auto;
+  }
+
+  .section-title{ 
+   @include interpolate(font-size, 320px, 1366px, 50px, 35px);
+    color: white;
+  }
+}
+
+.right-side-home{
+  ul li{
+    font-size: 185px;
+    letter-spacing: -15px;
+    font-weight: 700;
+    line-height: 153px;
+    color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px $red;
+    position: relative;
+    margin: 0;
+    padding-left: 0;
+    width: 95%;
+    text-align: right;
+    list-style-position: inside;
+    direction: rtl;
+  }
+}
+
+//img-overlay
+.img-overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: $red;
+  opacity: .8;
+}
+
+//top section home
+/*.home {
   .main-title-home {
     padding-top: 70px;
     h1 {
       @include interpolate(font-size, 320px, 1366px, 200px, 400px);
       letter-spacing: -65px;
       line-height: 262px;
-      font-weight: 600;
+
       padding-bottom: 0;
-      color: #050401;;
       position: relative;
       z-index: 1;
       text-rendering: optimizeLegibility !important;
       -webkit-font-smoothing: antialiased !important;
 
       &:before {
-        content: "";
         content: "";
         position: absolute;
         background-color: #f6f6f6;
@@ -261,16 +354,16 @@ html {
       }
     }
   }
-}
+}*/
 
 //details section
-.my-details{
-  height: 100vh;
+.my-details {
+  min-height: 100vh;
+  background-color: white;
   display: flex;
-  padding-top: 150px;
+  justify-content: center;
+  align-items: center;
 }
-
-
 
 .scroll-arrow-section {
   position: absolute;
@@ -309,6 +402,7 @@ html {
       margin-right: 30px;
       text-decoration: none;
       font-size: 20px;
+      color: white;
     }
   }
 }
@@ -408,7 +502,7 @@ html {
   background-color: #007bff !important;
   z-index: 1;
   position: relative;
-  background-image: linear-gradient(50deg, #002256 0%, #050401 100%);
+  background-image: linear-gradient(50deg, #002256 0%, white 100%);
 }
 
 .flex-container-column {
@@ -418,7 +512,7 @@ html {
   .img-container {
     position: relative;
   }
-  .project-info {
+  .project-info-- {
     position: absolute;
     z-index: 1;
     background-color: white;
@@ -445,7 +539,7 @@ html {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background-color: #050401;
+  background-color: white;
 }
 
 .overlay-2 {
@@ -453,7 +547,7 @@ html {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(50deg, #002256 0%, #050401 100%);
+  background-image: linear-gradient(50deg, #002256 0%, white 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -464,7 +558,7 @@ html {
   letter-spacing: -5px;
   line-height: 250px;
   font-weight: 600;
-  color: #050401;;
+  color: white;
   position: relative;
   z-index: 1;
   text-rendering: optimizeLegibility !important;
@@ -562,31 +656,6 @@ button {
 }
 
 //animations
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  60% {
-    -moz-transform: translateY(15px);
-    -ms-transform: translateY(15px);
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
-  }
-}
 
 #particles-js {
   position: absolute;
@@ -595,16 +664,7 @@ button {
   z-index: -1;
 }
 
-.right-wrap{
-  max-width: 50%;
-  height: 300px;
-  display: flex;
-  margin-left: auto;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.what-i-do{
+.what-i-do {
   /*ul{
     -moz-column-count: 4;
     -moz-column-gap: 20px;
@@ -613,11 +673,11 @@ button {
     column-count: 4;
     column-gap: 20px;
   }*/
-  ul{
+  ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
-    li{
+    li {
       border-bottom: 1px solid lightgray;
       font-size: 18px;
       color: $font-grey;
@@ -626,12 +686,115 @@ button {
   }
 }
 
-
-
 //seperator line
 .seperator {
   display: block;
-  background: #226CE0;
+  background: $red;
+  border-radius: 20px;
   width: 70px;
   height: 5px;
+}
+
+.project-bg {
+  background-image: url("../public/images/sendinblue-cover.png");
+  height: 650px;
+  width: 50%;
+  left: 0px;
+  top: 0px;
+  padding:0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media screen and (max-width: 991px) {
+    width: 100%;
+  }
+
+  img {
+    position: absolute;
+    margin: auto;
+    max-height: 63%;
+    top: 10%;
+    left: 30%;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+    @media screen and (max-width: 991px) {
+      max-height: 83%;
+      top: 40%;
+      left: 0;
+    }
+  }
+}
+
+.project-title {
+  position: absolute;
+  top: 10%;
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+  padding-left: calc(100% + 45px);
+
+  &::before {
+    content: "";
+    height: 3px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: $red;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 280px);
+  }
+}
+
+.project-info {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  color: white;
+}
+
+.l-project-info {
+  max-width: 450px;
+  width: 100%;
+}
+
+.project-info-lead{
+  font-size: 22px;
+}
+
+.seperator-project-info{
+  margin: 5px 0 10px;
+  height: 2px;
+}
+
+.job-info-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  margin-top: 20px;
+
+.heading{
+  font-weight: 700;
+  color: $red;
+}
+}
+
+
+
+#clip{
+  /*
+  Ensure background is added first
+  */  
+  background-image: linear-gradient(to bottom, $red, rgba(121, 11, 11, 0.2), #de0606),url("../public/images/noisegif.gif");
+  -webkit-text-fill-color: transparent;
+   background-blend-mode: color-burn;
+  -webkit-background-clip: text;
+  
+  font-size: 28vw;
+  font-weight: bold;
+  text-align: center;
 }
