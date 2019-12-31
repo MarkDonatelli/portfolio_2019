@@ -40,7 +40,7 @@
   height: 2px;
   top: 50%;
   margin-top: -0.5px;
-  background-color: $red;
+  background-color: $aqua;
 }
 
 .hover-line-through:before {
@@ -48,12 +48,12 @@
 }
 .hover-line-through:after {
   right: 2.5px;
-  background-color: $red;
+  background-color: $aqua;
   transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .hover-line-through:hover:before {
-  background-color: $red;
+  background-color: $aqua;
   width: 100%;
   transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }

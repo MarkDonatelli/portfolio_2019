@@ -10,11 +10,11 @@
 a {
   text-decoration: none !important;
   &:hover {
-    color: $red;
+    color: $aqua;
   }
 }
 
-body{
+body {
   //background-image: url("../public/images/noisegif.gif");
   //background-color:  #ff4d5a;
   //background-blend-mode: color-burn;
@@ -179,7 +179,7 @@ html {
 .main-menu {
   height: 100vh;
   width: 100vw;
-  background-color: white;
+  background-color: #101010;
   z-index: 99;
   position: fixed;
   top: -1200px;
@@ -238,14 +238,14 @@ html {
   justify-content: center;
   flex-direction: column;
 
-  .l-home-content{
-    margin:0 auto;
+  .l-home-content {
+    margin: 0 auto;
     position: relative;
   }
   .seperator-left {
     position: absolute;
     display: block;
-    background: $red;
+    background: $aqua;
     width: 90px;
     height: 5px;
     top: 95%;
@@ -254,7 +254,7 @@ html {
   .seperator-middle {
     position: absolute;
     display: block;
-    background: $red;
+    background: $aqua;
     width: 90px;
     height: 5px;
     top: 101%;
@@ -263,38 +263,43 @@ html {
   .seperator-right {
     position: absolute;
     display: block;
-    background: $red;
+    background: $aqua;
     width: 90px;
     height: 5px;
     top: 107%;
     left: 13.5%;
   }
   .main-title {
-    // @include interpolate(font-size, 320px, 1366px, 50px, 75px);
-    font-size: 122px;
+    @include interpolate(font-size, 320px, 1366px, 50px, 122px);
     line-height: 120px;
     color: white;
     text-transform: uppercase;
     letter-spacing: -4px;
     font-weight: 700;
     margin: 0 auto;
+
+    @media screen and (max-width: 1200px) {
+      line-height: 95px;
+    }
+
+
   }
 
-  .section-title{ 
-   @include interpolate(font-size, 320px, 1366px, 50px, 35px);
+  .section-title {
+    @include interpolate(font-size, 320px, 1366px, 50px, 35px);
     color: white;
   }
 }
 
-.right-side-home{
-  ul li{
+.right-side-home {
+  ul li {
     font-size: 185px;
     letter-spacing: -15px;
     font-weight: 700;
     line-height: 153px;
     color: transparent;
     text-transform: uppercase;
-    -webkit-text-stroke: 2px $red;
+    -webkit-text-stroke: 2px $aqua;
     position: relative;
     margin: 0;
     padding-left: 0;
@@ -302,16 +307,30 @@ html {
     text-align: right;
     list-style-position: inside;
     direction: rtl;
+
+    @media screen and (max-width: 1505px) {
+      font-size: 155px;
+      letter-spacing: -15px;
+      font-weight: 700;
+      line-height: 140px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      font-size: 112px;
+      letter-spacing: -10px;
+      font-weight: 700;
+      line-height: 110px;
+    }
   }
 }
 
 //img-overlay
-.img-overlay{
+.img-overlay {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: $red;
-  opacity: .8;
+  background-color: $aqua;
+  opacity: 0.8;
 }
 
 //top section home
@@ -497,29 +516,6 @@ html {
   }
 }
 
-//test
-.section-project-one {
-  background-color: #007bff !important;
-  z-index: 1;
-  position: relative;
-  background-image: linear-gradient(50deg, #002256 0%, white 100%);
-}
-
-.flex-container-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  .img-container {
-    position: relative;
-  }
-  .project-info-- {
-    position: absolute;
-    z-index: 1;
-    background-color: white;
-    padding: 20px 40px 20px 20px;
-  }
-}
-
 .circle {
   position: absolute;
   border: solid 2px rgb(43, 206, 179);
@@ -664,32 +660,10 @@ button {
   z-index: -1;
 }
 
-.what-i-do {
-  /*ul{
-    -moz-column-count: 4;
-    -moz-column-gap: 20px;
-    -webkit-column-count: 4;
-    -webkit-column-gap: 20px;
-    column-count: 4;
-    column-gap: 20px;
-  }*/
-  ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
-    li {
-      border-bottom: 1px solid lightgray;
-      font-size: 18px;
-      color: $font-grey;
-      padding-bottom: 5px;
-    }
-  }
-}
-
 //seperator line
 .seperator {
   display: block;
-  background: $red;
+  background: $aqua;
   border-radius: 20px;
   width: 70px;
   height: 5px;
@@ -701,7 +675,7 @@ button {
   width: 50%;
   left: 0px;
   top: 0px;
-  padding:0;
+  padding: 0;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -742,7 +716,7 @@ button {
     height: 3px;
     width: 50px;
     border-radius: 2px;
-    background-color: $red;
+    background-color: $aqua;
     background-color: white;
     position: absolute;
     top: 50%;
@@ -762,39 +736,48 @@ button {
   width: 100%;
 }
 
-.project-info-lead{
+.project-info-lead {
   font-size: 22px;
 }
 
-.seperator-project-info{
+.seperator-project-info {
   margin: 5px 0 10px;
   height: 2px;
 }
 
-.job-info-grid{
+.job-info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5px;
   margin-top: 20px;
 
-.heading{
-  font-weight: 700;
-  color: $red;
+  .heading {
+    font-weight: 700;
+    color: $aqua;
+  }
 }
-}
 
-
-
-#clip{
+#clip {
   /*
   Ensure background is added first
-  */  
-  background-image: linear-gradient(to bottom, $red, rgba(121, 11, 11, 0.2), #de0606),url("../public/images/noisegif.gif");
+  */
+  background-image: linear-gradient(
+      to bottom,
+      $aqua,
+      rgba(121, 11, 11, 0.2),
+      #de0606
+    ),
+    url("../public/images/noisegif.gif");
   -webkit-text-fill-color: transparent;
-   background-blend-mode: color-burn;
+  background-blend-mode: color-burn;
   -webkit-background-clip: text;
-  
+
   font-size: 28vw;
   font-weight: bold;
   text-align: center;
+}
+
+.svg {
+  position: absolute;
+  z-index: -1;
 }
